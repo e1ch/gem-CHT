@@ -140,11 +140,11 @@ function main takes nothing returns nothing
 	// `war3map.w3i`, but was removed to ensure accurate games list counts.
 	set index = 11
 	loop
-		call SetPlayerName (Player (index), "Monsters")
+                call SetPlayerName (Player (index), "怪物")
 		set index = index + 1
 		exitwhen index > 18
 	endloop
-	call SetPlayerName (Player (9), "Gem not in play")
+        call SetPlayerName (Player (9), "未參賽的寶石")
 
 	// The two faster game speeds cannot be used at all in single-player or
 	// multiplayer.  As such, we lock the speed to the default, to prevent
