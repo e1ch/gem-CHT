@@ -1179,7 +1179,7 @@ setup({
 		id = 'h03W',
 	},
 	abilities = {
-		[1] = abilities.endurance_aura('S000', 'Vitality'),
+               [1] = abilities.endurance_aura('S000', '活力'),
 	},
 	buttons = {
 		information = {
@@ -2912,7 +2912,7 @@ setup({
 		id = 'h015',
 	},
 	abilities = {
-		[1] = abilities.command_aura('A00G', 'Strength'),
+               [1] = abilities.command_aura('A00G', '力量'),
 	},
 	buttons = {
 		information = {
@@ -2935,7 +2935,7 @@ setup({
 		id = 'h02K',
 	},
 	abilities = {
-		[1] = abilities.command_aura('A013', 'Great Strength'),
+               [1] = abilities.command_aura('A013', '極致力量'),
 	},
 	buttons = {
 		information = {
@@ -3240,42 +3240,41 @@ have reduced movement speed.]]),
 buff({
 	id = 'B00F',
 	type = 'debuff',
-	name = 'Weakened',
-	description = text([[
-This unit is weakened and has reduced armor.]]),
+        name = '衰弱',
+        description = text([[
+此單位被削弱，護甲降低。]]),
 })
 
 buff({
 	id = 'B002',
 	type = 'buff',
-	name = 'Hasted',
-	description = text([[
-This unit is hasted and has increased attack speed.]]),
+        name = '加速',
+        description = text([[
+此單位被加速，攻擊速度提高。]]),
 })
 
 buff({
 	id = 'B00H',
 	type = 'buff',
-	name = 'Strength',
-	description = text([[
-This unit is imbued with strength and has increased physical damage.]]),
+        name = '力量',
+        description = text([[
+此單位被賦予力量，物理傷害提高。]]),
 })
 
 buff({
 	id = 'B00I',
 	type = 'buff',
-	name = 'Great Strength',
-	description = text([[
-This unit is imbued with great strength and has increased physical
-damage.]]),
+        name = '極致力量',
+        description = text([[
+此單位被賦予極致力量，物理傷害提高。]]),
 })
 
 buff({
 	id = 'B00R',
 	type = 'buff',
-	name = 'Vitality',
-	description = text([[
-This unit has improved vitality and has increased attack speed.]]),
+        name = '活力',
+        description = text([[
+此單位獲得活力，攻擊速度提高。]]),
 })
 
 buff({
