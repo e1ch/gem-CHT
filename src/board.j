@@ -114,17 +114,17 @@ function Board___Title takes player whom returns string
 		endif
 
 		set extra_chance = Color (color, name + " (" + I2S (bonus) + "x)")
-	elseif Commands__Is_No_Extra_Chance (whom) then
-		set extra_chance = Color__White ("Off")
-	else
-		set extra_chance = Color__White ("N/A")
-	endif
+        elseif Commands__Is_No_Extra_Chance (whom) then
+                set extra_chance = Color__White ("關閉")
+        else
+                set extra_chance = Color__White ("無")
+        endif
 
 	if round == Gem_Rank__LEVELS then
 		set round = round - 1
 	endif
 
-	set title = "Rank: " + rank + " — Level: " + Color__White (I2S (round))
+        set title = "排名：" + rank + " — 等級：" + Color__White (I2S (round))
 
 	if progress != null then
 		set title = title + progress
@@ -279,21 +279,21 @@ function Board__Setup takes nothing returns nothing
 	local multiboarditem board_item
 
 	set Board___Ranks [0] = "???"
-	set Board___Ranks [1] = "1st"
-	set Board___Ranks [2] = "2nd"
-	set Board___Ranks [3] = "3rd"
-	set Board___Ranks [4] = "4th"
-	set Board___Ranks [5] = "5th"
-	set Board___Ranks [6] = "6th"
-	set Board___Ranks [7] = "7th"
-	set Board___Ranks [8] = "8th"
+        set Board___Ranks [1] = "第1名"
+        set Board___Ranks [2] = "第2名"
+        set Board___Ranks [3] = "第3名"
+        set Board___Ranks [4] = "第4名"
+        set Board___Ranks [5] = "第5名"
+        set Board___Ranks [6] = "第6名"
+        set Board___Ranks [7] = "第7名"
+        set Board___Ranks [8] = "第8名"
 
 	// Header (by column):
-	set header [0] = "Players"
-	set header [1] = "Level"
-	set header [2] = "Gold"
-	set header [3] = "DPS"
-	set header [4] = "Progress"
+        set header [0] = "玩家"
+        set header [1] = "等級"
+        set header [2] = "金幣"
+        set header [3] = "每秒傷害"
+        set header [4] = "進度"
 
 	// Width (by column):
 	set space = String__Width (" ")
@@ -301,9 +301,9 @@ function Board__Setup takes nothing returns nothing
 	set maximum = space * 2 + String__Width ("W") * 15
 	set initial = space * 2 + String__Width ("W") * 6
 	set width [0] = initial
-	set width [1] = String__Width ("Level") + space * 3
-	set width [2] = String__Width ("Gold") + space * 4
-	set width [3] = String__Width ("DPS") + space * 7
+        set width [1] = String__Width ("等級") + space * 3
+        set width [2] = String__Width ("金幣") + space * 4
+        set width [3] = String__Width ("每秒傷害") + space * 7
 
 	if Game_Status () == Game_Status__REPLAY then
 		set width [4] = String__Width ("44.4% :-( (4444444)")
