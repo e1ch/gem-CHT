@@ -1,26 +1,26 @@
-// # Gem Information - Random Information
+// # 寶石資訊 - 隨機資訊
 
 function Gem_Information___Random_Information takes nothing returns nothing
-	local string title
-	local string icon
-	local string text
+        local string title
+        local string icon
+        local string text
 
-	set title = "Random Information"
-	set icon = "ReplaceableTextures\\CommandButtons\\BTNScrollOfProtection.blp"
+        set title = "隨機資訊"
+        set icon = "ReplaceableTextures\\CommandButtons\\BTNScrollOfProtection.blp"
 
-	set text = Color__Gold ("Stuns:") + "|n"
-	set text = text + "- New stuns cannot be applied until the first one has finished.|n"
-	set text = text + "- Units have 0.1 seconds of stun immunity after a stun has finished.|n|n"
+        set text = Color__Gold ("暈眩：") + "|n"
+        set text = text + "- 第一個暈眩結束之前無法施加新的暈眩。|n"
+        set text = text + "- 單位在暈眩結束後將有0.1秒的暈眩免疫。|n|n"
 
-	set text = text + Color__Gold ("Chain:") + "|n"
-	set text = text + "- For attacks with chain, the projectile will not travel to the same target twice.|n|n"
+        set text = text + Color__Gold ("連鎖：") + "|n"
+        set text = text + "- 具有連鎖的攻擊，其投射物不會兩次命中同一目標。|n|n"
 
-	set text = text + Color__Gold ("Triggered Attacks:") + "|n"
-	set text = text + "- Towers with 1 - 1 damage do not deal attack damage. They merely make use of the attack mechanic to trigger other abilities.|n|n"
+        set text = text + Color__Gold ("觸發攻擊：") + "|n"
+        set text = text + "- 造成 1 - 1 傷害的塔不會造成攻擊傷害。它們只是利用攻擊機制來觸發其他技能。|n|n"
 
-	set text = text + Color__Gold ("Buffs and Debuffs:") + "|n"
-	set text = text + "- Buffs and debuffs stack if they have different names. For example, Black Opal's Strength stacks with Mystic Black Opal's Great Strength. However, Opal Vein Slate's Boost does not stack with Wraith Slate's Boost.|n"
-	set text = text + "- For same named buffs and debuffs, special rules apply. Unless stated otherwise, a buff or debuff can only be applied one time by any source. If the count limit is reached, then new applications simply overwrite the old. And should a buff or debuff have multiple levels, as is the case with Opal's Haste, the highest level will have priority.|n"
+        set text = text + Color__Gold ("增益與減益：") + "|n"
+        set text = text + "- 名稱不同的增益與減益可以堆疊。例如，黑蛋白石的力量可與秘法黑蛋白石的強大力量堆疊。然而，蛋白石礦脈石板的增幅不會與幽魂石板的增幅堆疊。|n"
+        set text = text + "- 對於同名的增益與減益會套用特殊規則。除非另有說明，任何來源的增益或減益只能施加一次。若達到次數上限，新施加只會覆蓋舊有的。若增益或減益具有多個等級，如同蛋白石的加速，較高等級將會優先。|n"
 
-	call Gem_Information__Setup (CreateQuest (), title, icon, text)
+        call Gem_Information__Setup (CreateQuest (), title, icon, text)
 endfunction
