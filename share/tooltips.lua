@@ -22,13 +22,13 @@ local function data (id, field, level)
 end
 
 local function time (value)
-	assert(type(value) == 'number')
+        assert(type(value) == 'number')
 
-	if value == 1 then
-		return '1 second'
-	else
-		return string.format('%g seconds', value)
-	end
+        if value == 1 then
+                return '1 秒'
+        else
+                return string.format('%g 秒', value)
+        end
 end
 
 local function text (input, ...)
@@ -590,11 +590,11 @@ causing them to lose %.0f%% movement speed for %s.]],
 		return {
 			name = name or 'Immolation',
 			description = text(
-				[[
-Enemy units within %.0f range take %.0f spell damage per second.]],
-				radius,
-				damage
-			),
+                                [[
+在 %.0f 範圍內的敵方單位每秒受到 %.0f 點法術傷害。]],
+                                radius,
+                                damage
+                        ),
 		}
 	end,
 
@@ -662,12 +662,12 @@ lose %.0f%% movement speed for %s.]],
 		return {
 			name = name or 'Poison',
 			description = text(
-				[[
-Debuffs enemy units on attack, dealing %.0f spell damage per second for
-%s. This debuff can be applied by each source.]],
-				damage,
-				time(duration)
-			),
+                                [[
+在攻擊時削弱敵方單位，每秒造成 %.0f 點法術傷害，持續 %s。
+每個來源都可以施加此減益效果。]],
+                                damage,
+                                time(duration)
+                        ),
 		}
 	end,
 
@@ -1928,7 +1928,7 @@ setup({
 			name = 'Wound',
 			description = text([[
 Deals 256 plus 10 times its current number of kills in physical damage to
-the target. Causes the slate to disarm for 1 second.]]),
+the target. Causes the slate to disarm for 1 秒.]]),
 		},
 		[2] = abilities.command_aura('A072', 'Enhance'),
 	},
@@ -2038,8 +2038,8 @@ setup({
 		[1] = {
 			name = 'Hold',
 			description = text([[
-Grabs the target and stuns it for 1.5 seconds, causing the slate to disarm
-for 3.5 seconds. Deals 160 plus 20 times its current amount of kills in
+Grabs the target and stuns it for 1.5 秒, causing the slate to disarm
+for 3.5 秒. Deals 160 plus 20 times its current amount of kills in
 physical damage.]]),
 		},
 		[2] = hold_ancient_taunt,
@@ -2069,8 +2069,8 @@ setup({
 		[1] = {
 			name = 'Seize',
 			description = text([[
-Grabs the target and stuns it for 3 to 7 seconds, causing the slate to
-disarm for 5 seconds. Deals 640 plus 20 times its current amount of kills in
+Grabs the target and stuns it for 3 to 7 秒, causing the slate to
+disarm for 5 秒. Deals 640 plus 20 times its current amount of kills in
 physical damage. Debuffs enemy units, causing ground units to lose 6 armor
 and air units to lose 3 armor.]]),
 		},
@@ -2463,15 +2463,12 @@ do
 				[1] = {
 					name = 'Wildfire',
 					description = text(
-						[[
-Debuffs enemy units on attack, covering them in flames that cause them to
-burn like a Star Ruby. The marked target, and those within %.0f range of it,
-will take %.0f spell damage per second for the next %s. This debuff can be
-applied by each source.]],
-						radius,
-						damage,
-						time(duration)
-					),
+                                                [[
+在攻擊時削弱敵方單位，使其被火焰包覆，如星紅寶石般燃燒。被標記的目標及其 %.0f 範圍內的單位，每秒受到 %.0f 點法術傷害，持續 %s。每個來源都可以施加此減益效果。]],
+                                                radius,
+                                                damage,
+                                                time(duration)
+                                        ),
 				},
 			},
 			buttons = {
@@ -2543,7 +2540,7 @@ setup({
 		[4] = {
 			name = 'Lucky Charm',
 			description = text([[
-Gives a 2%% chance on attack to either stun the target for 2 seconds or
+Gives a 2%% chance on attack to either stun the target for 2 秒 or
 reward half the current level progress in gold.]]),
 		},
 	},
@@ -2633,7 +2630,7 @@ local dark_emerald_abilities = {
 	[1] = {
 		name = 'Despair',
 		description = text([[
-Gives a 12.5%% chance on attack to stun the target for 1.5 seconds. Debuffs
+Gives a 12.5%% chance on attack to stun the target for 1.5 秒. Debuffs
 enemy units on stun, causing them to take 20%% increased damage for the
 duration of the stun.]]),
 	},
@@ -2746,11 +2743,11 @@ local function uranium_immolation (level)
 	return {
 		name = 'Decay',
 		description = text(
-			[[
-Enemy units within %.0f range take %.0f spell damage per second.]],
-			radius,
-			damage
-		),
+                        [[
+在 %.0f 範圍內的敵方單位每秒受到 %.0f 點法術傷害。]],
+                        radius,
+                        damage
+                ),
 	}
 end
 
