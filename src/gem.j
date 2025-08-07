@@ -3,11 +3,15 @@
 // This system contains map specific information that is expected
 // to be referenced elsewhere.
 globals
-	constant string Gem__NAME = "Gem TD+"
-	constant string Gem__NAME_PATH = "Gem TD Plus"
-	constant string Gem__NAME_FULL = "Gem Tower Defense Plus"
-
-	constant string Gem__MAINTAINER = "NVS#12194"
+	constant string Gem__NAME = "寶石塔防+"	// Gem TD+
+	constant string Gem__NAME_EN = "Gem TD+"
+	constant string Gem__NAME_PATH = "寶石塔防 Plus"	// Gem TD Plus
+	constant string Gem__NAME_PATH_EN = "Gem TD Plus"
+	constant string Gem__NAME_FULL = "寶石塔防加強版"	// Gem Tower Defense Plus
+	constant string Gem__NAME_FULL_EN = "Gem Tower Defense Plus"
+	
+	constant string Gem__MAINTAINER = "維護者 NVS#12194"	// Maintainer
+	constant string Gem__MAINTAINER_EN = "NVS#12194"
 
 	constant string Gem__WEBSITE_DISCORD = "https://discord.gg/PxNNp77"
 	constant string Gem__WEBSITE_REPOSITORY = "https://github.com/nvs/gem"
